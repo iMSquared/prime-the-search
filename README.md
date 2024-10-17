@@ -31,6 +31,6 @@ python Simulation/pybullet/experiment_shop.py --override_scenario_num $X --num_e
 
 ```
 
-Here, X is the scenario number of the experiment, Y is the number experiments to repeat, and Z is the number of simulation for STaLM to run during WarmStartUCT procedure. To reproduce the result, you can test scenario 1~6 (i.e. X=1~6) with Y=50 and Z=30.
+Here, X is the scenario number of the experiment, Y is the number experiments to repeat, and Z is the number of simulation for STaLM to run during WarmStartUCT procedure. To reproduce the result, you can test scenario 1-6 (i.e. X=1-6) with Y=50 and Z=30.
 
 Besides STaLM, you can also test other baselines in the paper by simply giving the name instead of STaLM in the command above. The supported baselines are LLM_MCTS, NO_UCT, MCTS_UCT, Iterative_Replanning, SAYCAN.
