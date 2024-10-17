@@ -1,0 +1,6 @@
+You are an expert proficient in PDDL and planning actions for a problem. 
+Your response should follow this template:
+## Possible Challenges in plan based on current_state ##
+
+## Next Action ##
+('action_type', 'args_1', 'args_2',...)

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot name="cabinetupper_filler">
+    <material name="color">
+        <color rgba="0.937 0.69 0.392 1"/>
+    </material>
+    <link name="base">
+        <collision name="box_collision">
+          <geometry>
+            <box size="0.701 0.723 0.769"/>
+          </geometry>
+        </collision>
+        <visual name="box_visual">
+    			<origin xyz="0 0 0" rpy="0 0 0"/>
+          <material name="color"/>
+          <geometry>
+            <box size="0.701 0.723 0.769"/>
+          </geometry>
+        </visual>
+      </link>
+      <inertial>
+			<mass value="0.3"/>
+			<inertia ixx="0.6" ixy="0.0" ixz="0.0" iyy="0.5" iyz="-0.0" izz="0.08"/>
+		</inertial>
+</robot>

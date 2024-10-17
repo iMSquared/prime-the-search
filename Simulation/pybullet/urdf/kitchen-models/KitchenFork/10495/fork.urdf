@@ -1,0 +1,14 @@
+<robot name="fork">
+  <link name="fork">
+    <visual>
+      <geometry>
+        <mesh filename="fork.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="fork.stl" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

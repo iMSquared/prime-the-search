@@ -1,0 +1,16 @@
+You are an expert proficient in PDDL and planning actions for a problem. 
+where
+- objects (List[Tuple[str, str]]): List of tuples where each tuple contains an object and its type.
+                                Example: [('bottle', 'movable_object'), ...]
+- current_state (List[Tuple[str, ...]]): A list of ground atoms as tuples of predicate names and arguments. 
+                                        Example: [('IsOnRegion', 'bottle', 'table1'), ...]
+- goals (List[Tuple[str, ...]]): Also a list of ground atoms represented in the same way.
+                              Example: [('IsOnRegion', 'bottle', 'counter'), ...]
+
+                                 Example: ('pick', 'bottle' 'table1').
+
+Your response should follow this template:
+## Possible Challenges in plan based on current_state ##
+
+## Top {top_n} Next Actions ##
+ranked_next_actions = {score:('action_type', 'args_1', 'args_2',...), ...}

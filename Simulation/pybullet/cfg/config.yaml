@@ -1,0 +1,241 @@
+project_params:
+  problem: "shop"
+  use_nvidia: False
+  custom_urdf_path: "urdf"
+  robot: "pr2"
+
+  debug:
+    show_gui: False
+    get_data: False            # NOTE(ssh): This will be deprecated. Use the below one instead.
+
+  overridable:
+    collect_data: False        # Flag only for data collection, not debugging.
+    sftp        : False
+    default_exp_log_dir_path      : "./exp/log/"    
+    default_exp_learning_dir_path : "./exp/data/"
+    default_dataset_save_path     : "./exp/LLM/"                 # sim_dataset, exec_dataset dir will be created under here.
+
+    policy: "llm_plan" # llm_next for next step prediction only and llm_plan for whole plan prediction
+    value : "random"   # learned or llm or random or hcount, qfunction
+    rollout:                # random, pddlvalue or None 
+
+    inference_device: "cuda:0"
+    # mode: "value_range_sample_1"
+    prompt_params:
+      policy:
+        ip: 'http://137.68.192.174:8120'
+        model: "gpt-4-turbo-2024-04-09" ## "gpt-4" or "gpt-4-turbo"
+        logprobs: False
+        top_logprobs: 5
+        temperature: 0.7
+        max_tokens: 16
+        num_return: 1
+        generation_requirements: ['next_action'] #['chain_of_thought','next_action'] # "Thought_Action" or "Action"
+        sampling: True
+        use_failure_queue: True
+        num_trial: 8
+        example_paths: []
+        add_history: True
+        add_action_args: True
+        add_max_depth: False
+        predicate_description_method: "Single" # "Single" or "Divided"
+        observation_scope: 'all' # ['all', 'goal']
+        do_options: False
+        splitter: "## Problem ##"
+        add_action_preconditions: True
+        validate_preconditions: True 
+        add_min_condition: True
+        add_strategy: False
+
+sim_params:
+  control_hz: 240.0 
+  delay: 0.00
+  gravity: -9.81
+
+  debug_camera:
+    distance: 7.5
+    yaw: 0
+    pitch: -89.9
+    target_position: [0.0, 0.0, 0.60]
+    # distance: 1.5
+    # yaw: -30
+    # pitch: -70
+    # target_position: [-4.565, 3.2, 1.025]
+   
+
+manipulation_params:
+  main_hand: "right"
+  inverse_kinematics:
+    max_num_iterations: 10000
+    residual_threshold: 1.0E-12  
+  rrt_trials: 1 # Use utils.RRT_ITERATIONS instead.
+  sample_space: # EE base. Not tip.
+    center: [0.54, 0.04, 0.835]         # Sync with taskspace too.
+    half_ranges: [0.24, 0.15, 0.085]
+    yaw_range: [-3.14, 3.14]
+  delay: 0.001
+  resolutions: 0.05
+  num_samples: 10
+
+
+navigation_params:
+  base_limits: [[-5, -5], [5, 5]]
+  resolutions: 0.5
+  trials: 1
+  num_samples: 50
+  delay: 0.01
+  pickle: 
+    default_open: "default_open_navigation_prm_nodes.pkl"
+    default_close: "default_close_navigation_prm_nodes.pkl"
+    empty: "empty_navigation_prm_nodes.pkl"
+
+
+pose_sampler_params:
+  num_filter_trials_pick: 30
+  num_filter_trials_place: 40
+  num_filter_trials_sample: 2
+  num_filter_trials_force_fetch: 2 
+  num_filter_trials_state_description: 12
+  grasp_affordance_threshold: 0.67
+  pos_offset: 0.8
+  default_z: 0.42
+  default_orn: [0.0, -1.57, 0.0]
+
+
+env_params:
+  shop_env:
+    random_init:
+      grid:
+      target:
+
+    dynamics:
+      lateral_friction: 1.6
+      rolling_friction: 0.0004
+      spinning_friction: 0.0004
+      restitution: 0.1
+      door_duration: 2
+
+    depth_camera:
+      view_matrix:
+        target_pos: [0.5, 0.0, 0.67]
+        distance: 0.46
+        roll: 0.0
+        pitch: -90.0
+        yaw: -90.0
+
+      proj_matrix:
+        exec:
+          fov: 57.0
+          width: 424
+          height: 240
+          near_val: 0.01
+          far_val: 1
+          noise_std: 0.0001
+        sim:
+          fov: 57.0 # 87 for 1:1 = 57 for 424x240
+          width: 424
+          height: 240
+          near_val: 0.01
+          far_val: 1
+          noise_std: 0.0001
+
+
+problem_params:
+    robot:
+      - [[0.0, -3.0, 0.0], [0.0, 0.0, 0.0]]
+    grippers: ['right']
+    directions: ['front_of', 'behind_of','left_of', 'right_of', 'on']
+    objects:
+      - []
+    goal:   # To be fille with problem generator
+      - objects: []
+        regions: []
+    scenario: 7
+    all:
+
+
+robot_params:
+  pr2:
+    path: "pr2/pr2.urdf"
+    pos: [0.0, -3, 0] 
+    orn: [0.0, 0.0, 0.0]
+    joint_index_last: 6
+    joint_indices_arm: [1, 2, 3, 4, 5, 6]   # Without base fixed joint (UR5 specific)
+    link_index_endeffector_base: 6          # 6 is more stable than 7 when solving IK... for some unknown reason       
+    rest_pose: [
+      0.0,        # Base (Fixed)  
+      3.14159,        # Joint 0
+      -2.094,     # Joint 1
+      2.07,       # Joint 2
+      -1.57,      # Joint 3
+      -1.57,      # Joint 4
+      0.0,        # Joint 5         (Try to reset to 480 after release)
+      0.0,        # Joint 6 EE Base (Fixed)
+    ]
+
+plan_params:
+  time_limit: 300
+  max_depth: 26
+  num_sims: 20
+  visit_threshold: 1000000000
+  planning_time: -1
+  discount_factor: 0.99
+  selection: "ucb1"
+  initialize_q: "zero" #"Qvalue" or "zero"
+  exploration_const: 
+    ucb1: 50
+    pucb: 50
+  k_a: 1.5
+  alpha_a: 0.15
+  select_best_action: True
+  available_action_sample_method: "queue" # "queue" or "sample"
+  policy_value: 'exponential' # 'uniform' or 'weighted' or 'exponential'
+  exponential_temperature: 50
+  heuristic_type: "value"  # "value" or "cost"
+  detect_exogenous: False
+  follow_success_simulation: True
+  skip_occlusion_predicates: True
+
+  llm_trigger:   
+    always_llm_plan: False
+    llm_beam_num: 10
+    after_every_action: False
+    start_search_with_llm_plan: False
+  llm_assisted: False
+  llm_mcts: False
+  plan_with_cot: True
+  domain_pddl_filename: "domain_new_comments.pddl"
+  exclude_occluded_actions: False
+  rollout_depth: 20
+  MCTS_FIRST: False
+
+  policy:
+    random: 0
+    check_target_occlusion_only: False
+    orn_resolution: 16
+    placement_grid: [40, 40]
+
+  # Reward setting is dependent to [project_params][overridable][guide_preference]
+  reward:
+    success: 100.
+    fail: -100.
+    infeasible: -6.
+    timestep_pick: 0.
+    timestep_place: 0.
+    timestep_open: 0.
+    timestep_close: 0.
+    pick_goal: 0
+    place_goal: 3
+    max_depth_reward: 0.
+    distance_multiplier: 0
+
+  hcount:
+    default: 3
+    multiplier: 3
+    
+predicate_params:
+  is_absolute: False
+  use_relative_occlusion: True
+  lazy: False
+  use_saved: False
+  save_dir: "saved_predicates"

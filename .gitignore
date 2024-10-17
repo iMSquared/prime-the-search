@@ -1,0 +1,65 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+ref/
+*.o
+*.so
+
+# VScode
+.vscode/
+/wandb
+
+# LLM
+*.log 
+LLM/data/
+
+
+# Learning
+Simulation/pybullet_env/dataset_debug.py
+exp/
+data/
+
+# data
+*.txt
+!LLM/prompts/**/**.txt
+*.png
+*.jpg
+*.jpeg
+*.pth
+*.pt
+*.pkl
+*.json
+*.log
+!default_close_navigation_prm_nodes.pkl
+!default_open_navigation_prm_nodes.pkl
+!empty_navigation_prm_nodes.pkl
+!scenario_predicates/*.pkl
+!strategy.json
+!scenario_predicates/*.json
+LLM/api_token.json
+
+torchvision_profile.py
+LLM/vis_episode.ipynb
+mock_results_direct/filter_results.ipynb
+LLM/.streamlit/secrets.toml
+trace_processor
+
+!qfunction.txt
+!qfunction_refinement.txt
+!default.txt
+!default_refinement.txt
+!default_with_range.txt
+!failure_strategy.txt
+!human_strategy.txt
+!qfunction_refinement_failure.txt
+!default_refinement_failure.txt
+!qfunction_pddl.txt
+!value_pddl.txt
+Simulation/pybullet/imm/pybullet_tools/ikfast/pr2/ikLeft.cpython-310-x86_64-linux-gnu.so
+Simulation/pybullet/imm/pybullet_tools/ikfast/pr2/ikRight.cpython-310-x86_64-linux-gnu.so
+Simulation/pybullet/imm/pybullet_tools/ikfast/pr2/build/lib.linux-x86_64-cpython-310/ikLeft.cpython-310-x86_64-linux-gnu.so
+Simulation/pybullet/imm/pybullet_tools/ikfast/pr2/build/lib.linux-x86_64-cpython-310/ikRight.cpython-310-x86_64-linux-gnu.so
+Simulation/pybullet/imm/pybullet_tools/ikfast/pr2/build/temp.linux-x86_64-cpython-310/left_arm_ik.o
+Simulation/pybullet/imm/pybullet_tools/ikfast/pr2/build/temp.linux-x86_64-cpython-310/right_arm_ik.o
+!saved_predicates/predicates/*.json

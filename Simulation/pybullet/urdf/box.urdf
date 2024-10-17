@@ -1,0 +1,39 @@
+<robot name="box_with_opening">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="1 1 1"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="1 1 1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="opening">
+    <visual>
+      <geometry>
+        <box size="0.2 0.2 0.01"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.2 0.2 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="opening_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="opening"/>
+    <origin xyz="0 0 0.5" rpy="0 0 0"/>
+  </joint>
+</robot>

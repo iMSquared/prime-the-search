@@ -1,0 +1,19 @@
+<robot name="floor1">
+    <material name="floor">
+        <color rgba="0.824 0.706 0.549 1">
+    </material>
+    <link name="base_link">
+        <visual name="box_visual">
+    			<origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+            <box size="3.0 8.0 0.001"/>
+            </geometry>
+            <material name="floor"/>
+        </visual>
+        <collision name="box_collision">
+            <geometry>
+            <box size="3.0 8.0 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

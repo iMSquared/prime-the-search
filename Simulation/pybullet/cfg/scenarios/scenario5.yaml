@@ -1,0 +1,287 @@
+goal:
+    - objects: [["coke", "sprite", "beef_grill"]]
+      regions: [["counter1", "on"]]
+optimal_length: 13
+door_duration: 4
+
+
+kitchen_config:
+
+    cabinetlower1: 
+        path: "kitchen-models/CabinetLower/45213/mobility.urdf"
+        static: True
+        scale: 0.6925682644178336
+        pos: [-4.589, 3.45, 0.545]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: False
+        IsReceptacle: False
+        EntityGroup:
+        offset: 
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+
+    counter1: 
+        path: "kitchen-models/basic/counter#2.urdf"
+        static: True
+        scale: 1.0
+        pos: [-4.565, 3.45, 1.025]
+        orn: [0.0, 0.0, 0.0]
+        IsOpenable: False
+        IsRegion: True
+        IsReceptacle: False
+        EntityGroup: ["counter1", "cabinetlower1"]
+        offset: [[0.82, 0, 0], [0, 0, 3.14159]]
+        taskspace: [[-0.25, -0.266, -0.025], [0.41, 0.266, 0.025]]
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    
+    cabinetlower2: 
+        path: "kitchen-models/CabinetLower/45213/mobility.urdf"
+        static: True
+        scale: 0.6925682644178336
+        pos: [-4.589, -1.45, 0.545]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: False
+        IsReceptacle: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+
+    counter2: 
+        path: "kitchen-models/basic/counter#2.urdf"
+        static: True
+        scale: 1.0
+        pos: [-4.565, -1.447, 1.025]
+        orn: [0.0, 0.0, 0.0]
+        IsOpenable: False
+        IsRegion: True
+        IsReceptacle: False
+        EntityGroup: ["counter2", "cabinetlower2"]
+        offset: [[0.82, 0, 0], [0, 0, 3.14159]]
+        taskspace: [[-0.25, -0.266, -0.025], [0.41, 0.266, 0.025]]
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+
+    coke: 
+        path: "kitchen-models/Drinks/Soda/mobility_goal.urdf"
+        static: False
+        scale: 10.0
+        pos: [-4.47, -1.4, 1.235]
+        orn: [0.0, 1.571, 0.0]
+        IsOpenable: False
+        IsRegion: False
+        IsReceptacle: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points: [[-0.02, 0.0, 0.0]]
+            angles: [[0.0, 0.0, -1.0472], [0.0, 0.7854, 1.0472]]
+            backward: 0.01
+            forward: 0.01
+
+    beef_grill: 
+        path: "grill/grill.urdf"
+        static: False
+        scale: 1.1
+        pos: [-4.35, -1.4, 1.235]
+        orn: [0.0, -0.0, 0.0]
+        IsOpenable: False
+        IsRegion: False
+        IsReceptacle: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points: [[0.0, -0.230, 0.045], [0.0, 0.230, 0.045]]
+            angles: [[1.5708, 0.5, -0.5], [1.5708, 0.7854, 0.5]]
+            backward: 0.045
+            forward: 0.045
+
+    wall1: 
+        path: "wall/wall1.urdf"
+        static: True
+        scale: 1.0
+        pos: [-4.55, 3.45, 1.14]
+        orn: [0.0, 0.0, 0.0]
+        IsOpenable: False
+        IsRegion: False
+        IsReceptacle: False
+        EntityGroup: []
+        offset: []
+        taskspace: []
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    kitchen_door: 
+        path: "door/door.urdf"
+        static: True    
+        scale: 0.001
+        pos: [-2, -4.92, 0]
+        orn: [0.0, -0.0, 0]
+        handle_link_index: 0
+        handle_pos: [[0.05, 1.635, 1.1], [-0.05, 1.635, 1.1]]
+        handle_init_orn: [[0, 0, 0, 1], [0, 0, 1, 0]]
+        handle_direction: [1, -1]
+        IsOpenable: True
+        IsRegion: True
+        IsReceptacle: False
+        EntityGroup: ["kitchen_door"]
+        offset: [[[0.75, -0.4, 0], [0, 0, 3.14159]], [[0.80, 0.45, 0], [0, 0, 4.0]]]
+        taskspace:
+        pick_param:
+            points: []
+            angles: [[0.0, -0.7854, -1.0472], [0.0, 0.0, 1.0472]]
+            backward: 0.01
+            forward: 0.01
+        default_position: 0.0
+        initial_state: True
+
+hall_config:
+    
+    cabinetlower3: 
+        path: "kitchen-models/CabinetLower/45213/mobility.urdf"
+        static: True
+        scale: 0.6925682644178336
+        pos: [4.5, 2.0, 0.545]
+        orn: [0.0, -0.0, 0.0]
+        IsOpenable: False
+        IsRegion: False
+        IsReceptacle: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+
+    cabinetlower5: 
+        path: "kitchen-models/CabinetLower/45213/mobility.urdf"
+        static: True
+        scale: 0.6925682644178336
+        pos: [4.5, 0.0, 0.545]
+        orn: [0.0, -0.0, 0.0]
+        IsOpenable: False
+        IsRegion: False
+        IsReceptacle: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+
+    counter3: 
+        path: "kitchen-models/basic/counter#2.urdf"
+        static: True
+        scale: 1.0
+        pos: [4.524, 2.003, 1.025]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: True
+        IsReceptacle: False
+        EntityGroup: ["counter3", "cabinetlower3"]
+        offset: [[0.82, 0, 0], [0, 0, 3.14159]]
+        taskspace: [[-0.25, -0.266, -0.025], [0.41, 0.266, 0.025]]
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+
+    counter5: 
+        path: "kitchen-models/basic/counter#2.urdf"
+        static: True
+        scale: 1.0
+        pos: [4.524, 0.003, 1.025]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: True
+        IsReceptacle: False
+        EntityGroup: ["counter5", "cabinetlower5"]
+        offset: [[0.82, 0, 0], [0, 0, 3.14159]]
+        taskspace: [[-0.25, -0.266, -0.025], [0.41, 0.266, 0.025]]
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+
+    sprite: 
+        path: "kitchen-models/Drinks/Soda/mobility_goal.urdf"
+        static: False
+        scale: 10.0
+        pos: [4.43, 1.90, 1.25]
+        orn: [0.0, 1.571, 0.0]
+        IsOpenable: False
+        IsRegion: False
+        IsReceptacle: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points: [[-0.02, 0.0, 0.0]]
+            angles: [[0.0, 0.0, -1.0472], [0.0, 0.7854, 1.0472]]
+            backward: 0.01
+            forward: 0.01
+
+    mango_juice: 
+        path: "kitchen-models/Drinks/Soda/mobility.urdf"
+        static: False
+        scale: 10.0
+        pos: [4.5, 0.1, 1.25]
+        orn: [0.0, 1.571, 0.0]
+        IsOpenable: False
+        IsRegion: False
+        IsReceptacle: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points: [[-0.02, 0.0, 0.0]]
+            angles: [[0.0, 0.0, -1.0472], [0.0, 0.7854, 1.0472]]
+            backward: 0.01
+            forward: 0.01
+
+    dr_pepper: 
+        path: "kitchen-models/Drinks/Soda/mobility.urdf"
+        static: False
+        scale: 10.0
+        pos: [4.2, -0.1, 1.25]
+        orn: [0.0, 1.571, 0.0]
+        IsOpenable: False
+        IsRegion: False
+        IsReceptacle: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points: [[-0.02, 0.0, 0.0]]
+            angles: [[0.0, 0.0, -1.0472], [0.0, 0.7854, 1.0472]]
+            backward: 0.01
+            forward: 0.01
+        
+

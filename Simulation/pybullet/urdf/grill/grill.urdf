@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<robot name="grill.obj">
+	<material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
+	<material name="Black"><color rgba="0.2 0.2 0.2 1.0"/></material>
+	<material name="meat"><color rgba="0.9 0.5 0.16 1.0"/></material>
+	<link name="meat">
+		<visual>
+			<origin xyz="0.0 0.0 0.2" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="meat.obj" scale="0.0009 0.0012 0.0009" />
+			</geometry>
+			<material name="meat"/>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="meat_vhacd.obj" scale="0.0009 0.0012 0.0009" />
+			</geometry>
+		<origin xyz="0.0 0.0 0.2" rpy="0 0 0" /></collision>
+		<inertial>
+			<mass value="0.1" />
+			<inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="-0.0" izz="0.03" />
+		</inertial>
+	</link>
+	<link name="grill">
+		<visual>
+			<origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="grill_base.obj" scale="0.001 0.0012 0.001" />
+			</geometry>
+			<material name="Black"/>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="grill_base_vhacd.obj" scale="0.001 0.0012 0.001" />
+			</geometry>
+		<origin xyz="0.0 0.0 0.0" rpy="0 0 0" /></collision>
+		<inertial>
+			<mass value="0.5" />
+			<inertia ixx="0.6" ixy="0.0" ixz="0.0" iyy="0.5" iyz="-0.0" izz="0.08" />
+		</inertial>
+	</link>
+	<joint name="joint_1" type="fixed">
+		<origin rpy="0.0 0.0 0.0" xyz="0 0 0"/>
+		<child link="grill"/>
+		<parent link="meat"/>
+	</joint>
+</robot>

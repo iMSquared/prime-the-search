@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<robot name="14025_Soda_Can_v3_l3">
+	<material name="white"><color rgba="1.0 1.0 1.0 1.0"/></material>
+	<link name="base"/>
+	<link name="link_1">
+		<visual name="body-6">
+			<origin xyz="0 0 0"/>
+			<geometry>
+				<mesh filename="14025_Soda_Can_v3_l3.obj" scale="0.001 0.001 0.001"/>
+			</geometry>
+			<material name="white"/>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0"/>
+			<geometry>
+				<mesh filename="14025_Soda_Can_v3_l3.obj" scale="0.001 0.001 0.001"/>
+			</geometry>
+		</collision>
+	</link>
+	<joint name="joint_1" type="fixed">
+		<origin rpy="1.570796326794897 1.570796326794897 -1.570796326794897" xyz="0 0 0"/>
+		<child link="link_1"/>
+		<parent link="base"/>
+	</joint>
+</robot>

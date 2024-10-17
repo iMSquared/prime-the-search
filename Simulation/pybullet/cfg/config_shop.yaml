@@ -1,0 +1,692 @@
+kitchen_config:
+    sinkbase:
+        path: "kitchen-models/SinkBase/46120/mobility.urdf"
+        static: True
+        scale: 0.8161753002471445
+        pos: [-4.597, 3.606, 0.509]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    sink1: 
+        path: "kitchen-models/Sink/100685/mobility.urdf"
+        static: True
+        scale: 0.5
+        pos: [-4.246, 3.607, 1.09]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    faucet: 
+        path: "kitchen-models/Faucet/148/mobility.urdf"
+        static: True
+        scale: 0.15
+        pos: [-4.698, 3.606, 1.129]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    sink_counter_left: 
+        path: "kitchen-models/basic/sink_counter_left.urdf"
+        static: True
+        scale: 1.0
+        pos: [-4.565, 3.203, 1.025]
+        orn: [0.0, -0.0, 0.0]
+        IsOpenable: False
+        IsRegion: True
+        EntityGroup: ["sinkbase", "sink1", "sink_counter_left", "sink_counter_right", "sink_counter_front", "sink_counter_back"]
+        offset: [[-0.9, 0.3, 0], [0, 0, 0.5]]
+        taskspace: [[-0.4354199078043161, 0.19634888223373972, 0.49099997282028196], [0.0, 0.6096775765064947, 0.540999972820282]]
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    sink_counter_right: 
+        path: "kitchen-models/basic/sink_counter_right.urdf"
+        static: True
+        scale: 1.0
+        pos: [-4.565, 4.0, 1.025]
+        orn: [0.0, -0.0, 0.0]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    sink_counter_front: 
+        path: "kitchen-models/basic/sink_counter_front.urdf"
+        static: True
+        scale: 1.0
+        pos: [-4.201, 3.606, 1.025]
+        orn: [0.0, -0.0, 0.0]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    sink_counter_back: 
+        path: "kitchen-models/basic/sink_counter_back.urdf"
+        static: True
+        scale: 1.0
+        pos: [-4.814, 3.606, 1.025]
+        orn: [0.0, -0.0, 0.0]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    cabinettall1: 
+        path: "kitchen-models/CabinetTall/46197/mobility.urdf"
+        static: True
+        scale: 1.0548895890878514
+        pos: [-4.457, 4.533, 0.993]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup: ["cabinettall1"]
+        offset: [[-1.0, 0, 0], [0, 0, 3.14159]]
+        taskspace: [[-0.24563405635832303, -0.2686696918975551, -0.9941942579375485], [0.267343693201212, 0.266264546934184, 1.0053666253497486]]
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    minifridgebase: 
+        path: "kitchen-models/MiniFridgeBase/46166/mobility.urdf"
+        static: True
+        scale: 0.3992220343713703
+        pos: [-4.531, 2.572, 0.157]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    minifridge:
+        path: "kitchen-models/MiniFridge/12249/mobility.urdf"
+        static: True
+        scale: 0.7
+        pos: [-4.553, 2.566, 0.813]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: True
+        EntityGroup: ["minifridgebase", "minifridge"]
+        offset: [[-0.9, 0.2, 0], [0, 0, 0.0]]
+        taskspace: [[-0.25, -0.35016990685462973, 0.16372761940956115], [0.0, 0.34431657874584215, 1.2063402094841005]]
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    cabinettall2: 
+        path: "kitchen-models/CabinetTall/46236/mobility.urdf"
+        static: True
+        scale: 1.039033364067227
+        pos: [-4.498, 1.932, 0.99]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup: ["cabinettall2"]
+        offset: [[],[]]
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    cabinetlower: 
+        path: "kitchen-models/CabinetLower/45213/mobility.urdf"
+        static: True
+        scale: 0.6925682644178336
+        pos: [-4.589, 1.339, 0.545]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset: 
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    dishwasherbox: 
+        path: "kitchen-models/DishwasherBox/12428/mobility.urdf"
+        static: True
+        scale: 0.765108623690049
+        pos: [-4.521, 0.633, 0.532]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    cabinetlower1: 
+        path: "kitchen-models/CabinetLower/41004/mobility.urdf"
+        static: True
+        scale: 0.6529563369284499
+        pos: [-4.593, 0.089, 0.539]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    ovencounter: 
+        path: "kitchen-models/OvenCounter/101917/mobility.urdf"
+        static: True
+        scale: 0.7495802353663914
+        pos: [-4.58, -0.615, 0.593]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    cabinetlower2: 
+        path: "kitchen-models/CabinetLower/45213/mobility.urdf"
+        static: True
+        scale: 0.6925682644178336
+        pos: [-4.589, -1.45, 0.545]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    counter1: 
+        path: "kitchen-models/basic/counter#1.urdf"
+        static: True
+        scale: 1.0
+        pos: [-4.565, 0.747, 1.025]
+        orn: [0.0, -0.0, 0.0]
+        IsOpenable: False
+        IsRegion: True
+        EntityGroup: ["counter1", "cabinetlower", "dishwasherbox", "cabinetlower1"]
+        offset: [[1.0, 0, 0], [0, 0, 3.14159]]
+        taskspace: [[-0.0, -0.8745, -0.025], [0.4035, 0.8745, 0.025]]
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    counter2: 
+        path: "kitchen-models/basic/counter#2.urdf"
+        static: True
+        scale: 1.0
+        pos: [-4.565, -1.447, 1.025]
+        orn: [0.0, -0.0, 0.0]
+        IsOpenable: False
+        IsRegion: True
+        EntityGroup: ["counter2", "cabinetlower2"]
+        offset: [[1.0, 0, 0], [0, 0, 3.14159]]
+        taskspace: [[-0.0, -0.2795, -0.025], [0.4035, 0.2795, 0.025]]
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    counter_back1: 
+        path: "kitchen-models/basic/counter_back#1.urdf"
+        static: True
+        scale: 1.0
+        pos: [-4.969, -1.447, 1.025]
+        orn: [0.0, -0.0, 0.0]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    counter_back2: 
+        path: "kitchen-models/basic/counter_back#2.urdf"
+        static: True
+        scale: 1.0
+        pos: [-4.969, 0.747, 1.025]
+        orn: [0.0, -0.0, 0.0]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    counter_back3: 
+        path: "kitchen-models/basic/counter_back#3.urdf"
+        static: True
+        scale: 1.0
+        pos: [-4.969, 3.596, 1.025]
+        orn: [0.0, -0.0, 0.0]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    cabinetupper: 
+        path: "kitchen-models/CabinetUpper/46108/mobility.urdf"
+        static: True
+        scale: 0.5521509362097788
+        pos: [-4.079, 0.232, 2.243]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    cabinetupper_filler: 
+        path: "kitchen-models/basic/cabinetupper_filler.urdf"
+        static: True
+        scale: 1.0
+        pos: [-4.619, 0.237, 2.234]
+        orn: [0.0, -0.0, 0.0]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    shelf_lower: 
+        path: "kitchen-models/basic/shelf_lower.urdf"
+        static: True
+        scale: 1.0
+        pos: [-4.566, -0.613, 1.875]
+        orn: [0.0, -0.0, 0.0]
+        IsOpenable: False
+        IsRegion: True
+        EntityGroup: ["shelf_lower"]
+        offset: [[1.0, 0, 0], [0, 0, 3.14159]]
+        taskspace: [[-0.4035, -0.485, -0.025], [0.4035, 0.485, 0.025]]
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    microwave: 
+        path: "kitchen-models/Microwave/7263/mobility.urdf"
+        static: True
+        scale: 0.31671702886061925
+        pos: [-4.766, 1.123, 1.205]
+        orn: [0.0, -0.0, 3.142]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    salter: 
+        path: "kitchen-models/Salter/6335/mobility.urdf"
+        static: False
+        scale: 0.07
+        pos: [-4.21, -1.267, 1.235]
+        orn: [0.0, -0.0, 1.564]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points: []
+            angles: [[0.0, 0.0, -1.0472], [0.0, 0.7854, 1.0472]]
+            backward: 0.03
+            forward: 0.03
+    bottle: 
+        path: "kitchen-models/Bottle/3574/mobility.urdf"
+        static: False
+        scale: 0.16
+        pos: [-4.251, -1.654, 1.235]
+        orn: [0.0, -0.0, 1.098]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points: []
+            angles: [[0.0, 0.0, -1.0472], [0.0, 0.7854, 1.0472]]
+            backward: 0.03
+            forward: 0.03
+    plate: 
+        path: "kitchen-models/Plate/SquarePlate/mobility.urdf"
+        static: False
+        scale: 0.028
+        pos: [-4.55, -1.5, 1.235]
+        orn: [0.0, -0.0, 1.098]
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points: [[-0.19, -0.19, 0.05], [0.19, -0.19, 0.05], [-0.19, 0.19, 0.05], [0.19, 0.19, 0.05]]
+            angles: [[1.5708, -0.7854, -1.0472], [1.5708, 0.0, 1.0472]]
+            backward: 0.03
+            forward: 0.03
+    # tray:
+    #     path: "kitchen-models/Tray/100685/mobility.urdf"
+    #     static: False
+    #     scale: 0.6
+    #     pos: [-4.3, 0.5, 1.235]
+    #     orn: [0.0, 0.0, 0]
+    #     IsOpenable: False     
+    #     IsRegion: True
+    #     EntityGroup: ["tray"]
+    #     offset: [[1.0, 0, 0], [0, 0, 3.14159]]
+    #     taskspace: [[-0.5168290747106785, -0.26826415972850154, -0.003011123939903902], [0.050526877142074295, 0.2661949243072567, 0.06399807381552286]]
+    #     pick_param:
+    #         points: [[-0.51, -0.265, 0.01], [-0.51, 0.265, 0.01], [0.05, -0.265, 0.01], [0.05, 0.265, 0.01]]
+    #         angles: [[1.5708, 0.7854, -1.0472], [1.5708, 0.0, 1.0472]]
+    #         backward: 0.03
+    #         forward: 0.03
+
+    kitchen_door: 
+        path: "door/door.urdf"
+        static: True    
+        scale: 0.001
+        pos: [-2, -4.92, 0]
+        orn: [0.0, -0.0, 0]
+        handle_link_index: 0
+        handle_pos: [[0.05, 1.635, 1.1], [-0.05, 1.635, 1.1]]
+        handle_init_orn: [[0, 0, 0, 1], [0, 0, 1, 0]]
+        handle_direction: [1, -1]
+        IsOpenable: True
+        IsRegion: True
+        EntityGroup: ["kitchen_door"]
+        offset: [[[0.75, -0.4, 0], [0, 0, 3.14159]], [[0.80, 0.45, 0], [0, 0, 4.0]]]
+        taskspace:
+        pick_param:
+                points: []
+                angles: [[0.0, 0.0, -1.0472], [0.0, 0.7854, 1.0472]]
+                backward: 0.03
+                forward: 0.03
+        default_position: 0.0
+        initial_state: True
+
+hall_config:
+    
+    table1: 
+        path: "jokkmokk/table.urdf" 
+        static: True
+        scale: 1
+        pos: [3, -2, 0.5]
+        orn: [0.0, -0.0, 0]
+        IsOpenable: False
+        IsRegion: True
+        EntityGroup: ["table1"]
+        offset: [[0, -1.3, 0], [0, 0, 1.5708]]
+        taskspace: [[-0.1425769715309143, -0.8057859926223755, -0.5969715206623077], [0.6425819783210754, -0.4, 0.5973975001573563]]
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    table2: 
+        path: "jokkmokk/table.urdf"
+        static: True
+        scale: 1
+        pos: [3, 2, 0.5]
+        orn: [0.0, -0.0, 0]
+        IsOpenable: False
+        IsRegion: True
+        EntityGroup: ["table2"]
+        offset: [[0, -1.3, 0], [0, 0, 1.5708]]
+        taskspace: [[-0.1425769715309143, -0.8057859926223755, -0.5969715206623077], [0.6425819783210754, -0.4, 0.5973975001573563]]
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+    chair:
+        path: "jokkmokk/chair.urdf"
+        static: True
+        scale: 1
+        IsOpenable: False
+        IsRegion: False
+        EntityGroup:
+        offset:
+        taskspace:
+        pick_param:
+            points:
+            angles:
+            backward:
+            forward:
+        
+
+
+# tray_assets: 
+#     tray1:
+#         path: "kitchen-models/Tray/100191/mobility.urdf"
+#         static: False
+#         scale: 0.1
+#         pos: [3, 2, 4]
+#         orn: [0.0, -0.0, 0]
+#     tray2:
+#         path: "kitchen-models/Tray/100501/mobility.urdf"
+#         static: False
+#         scale: 0.1
+#         pos: [3, 2, 4]
+#         orn: [0.0, -0.0, 0]
+#     tray3:
+#         path: "kitchen-models/Tray/100685/mobility.urdf"
+#         static: False
+#         scale: 0.7
+#         pos: [3, 2, 4]
+#         orn: [0.0, -0.0, 0]
+#         IsOpenable: False
+#         IsRegion: True
+#     tray4:
+#         path: "kitchen-models/Tray/101176/mobility.urdf"
+#         static: False
+#         scale: 0.1
+#         pos: [3, 2, 4]
+#         orn: [0.0, -0.0, 0]
+
+
+bottle_assets: 
+    bottle1:
+        path: "kitchen-models/Bottle/3558/mobility.urdf"
+        static: False
+        scale: 0.1
+        pos: [3, 2, 0.5]
+        orn: [0.0, -0.0, 0]
+    bottle2:
+        path: "kitchen-models/Bottle/3574/mobility.urdf"
+        static: False
+        scale: 0.2
+        pos: [3, 2, 0.5]
+        orn: [0.0, -0.0, 0]
+    bottle3:
+        path: "kitchen-models/Bottle/3614/mobility.urdf"
+        static: False
+        scale: 0.1
+        pos: [3, 2, 0.5]
+        orn: [0.0, -0.0, 0]
+    bottle4:
+        path: "kitchen-models/Bottle/3615/mobility.urdf"
+        static: False
+        scale: 0.1
+        pos: [3, 2, 0.5]
+        orn: [0.0, -0.0, 0]
+    bottle5:
+        path: "kitchen-models/Bottle/3616/mobility.urdf"
+        static: False
+        scale: 0.1
+        pos: [0.749, 6.963, 1.235]
+        orn: [0.0, -0.0, 2.497]
+    bottle6:
+        path: "kitchen-models/Bottle/3822/mobility.urdf"
+        static: False
+        scale: 0.1
+        pos: [0.749, 1.346, 1.235]
+        orn: [0.0, -0.0, 1.098]
+    
+
+
+seasoning_assets: 
+    VinegarBottle:
+        path: "kitchen-models/VinegarBottle/3615/mobility.urdf"
+        static: False
+        scale: 0.1
+        pos: [3, 2, 0.5]
+        orn: [0.0, -0.0, 0]
+    Salter1:
+        path: "kitchen-models/Salter/3934/mobility.urdf"
+        static: False
+        scale: 0.1
+        pos: [3, 2, 0.5]
+        orn: [0.0, -0.0, 0]
+    Salter2:
+        path: "kitchen-models/Salter/5861/mobility.urdf"
+        static: False
+        scale: 0.1
+        pos: [3, 2, 0.5]
+        orn: [0.0, -0.0, 0]
+    Salter3:
+        path: "kitchen-models/Salter/6335/mobility.urdf"
+        static: False
+        scale: 0.1
+        pos: [-4.7, -2.8, 1.1]
+        orn: [0.0, -0.0, 0]
+    Salter4:
+        path: "kitchen-models/Salter/6493/mobility.urdf"
+        static: False
+        scale: 0.1
+        pos: [3, 2, 0.5]
+        orn: [0.0, -0.0, 0]  
+    OilBottle:
+        path: "kitchen-models/OilBottle/3616/mobility.urdf"
+        static: False
+        scale: 0.1
+        pos: [3, 2, 0.5]
+        orn: [0.0, -0.0, 0]
+
+
+plate_assets: 
+    SquarePlate:
+        path: "kitchen-models/Plate/SquarePlate/mobility.urdf"
+        static: False
+        scale: 0.03
+        pos: [-4.5, -2.5, 1.1]
+        orn: [0.0, -0.0, 0]  
+    Plate:
+        path: "kitchen-models/KitchenSpoon/plate.urdf"
+        static: False
+        scale: 0.5
+        pos: [3, 2, 0.5]
+        orn: [0.0, -0.0, 0]
+
+
+fork_assets: 
+    KitchenFork:
+        path: "kitchen-models/KitchenFork/10495/fork.urdf"
+        static: False
+        scale: 2.3
+        pos: [0, 0, 0.5]
+        orn: [0.0, -0.0, 0]
+
+
+knife_assets: 
+    KitchenKnife:
+        path: "kitchen-models/KitchenKnife/103729/knife.urdf"
+        static: False    
+        scale: 4.3
+        pos: [0, 0, 0.5]
+        orn: [0.0, -0.0, 0]
+    
+
+spoon_assets: 
+    KitchenSpoon:
+        path: "kitchen-models/KitchenSpoon/spoon.urdf"
+        static: False    
+        scale: 2.3
+        pos: [0, 0, 0.5]
+        orn: [0.0, -0.0, 0]
+    
+
+
+    
