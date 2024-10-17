@@ -4,7 +4,7 @@
 
 This is an official code for STaLM (submitted to IJRR)
 
-![Figure][pipeline.png]
+![Figure][media/pipeline.png]
 
 ## Set up
 
