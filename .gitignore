@@ -63,3 +63,4 @@ Simulation/pybullet/imm/pybullet_tools/ikfast/pr2/build/lib.linux-x86_64-cpython
 Simulation/pybullet/imm/pybullet_tools/ikfast/pr2/build/temp.linux-x86_64-cpython-310/left_arm_ik.o
 Simulation/pybullet/imm/pybullet_tools/ikfast/pr2/build/temp.linux-x86_64-cpython-310/right_arm_ik.o
 !saved_predicates/predicates/*.json
+!pipeline.png
