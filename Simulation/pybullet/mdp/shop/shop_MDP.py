@@ -774,7 +774,6 @@ class ShopTransitionModel(TransitionModel):
 
         action.feasible = success
         
-        ## FIXME (SJ): The previous implementation seems to be failing when the action is not feasible
         if not action.is_feasible():
             next_state = deepcopy(state)
             return next_state

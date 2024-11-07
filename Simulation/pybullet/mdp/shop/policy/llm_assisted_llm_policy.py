@@ -249,10 +249,7 @@ class ShopLLMassistedPDDLPolicy(ShopLLMassistedLLMPolicy):
 
     def set_prompt_processors(self, config):
         predicate_converter = PDDLStyleState(config)
-        if self.config['baseline'] in ['SAYCAN','ReAct']:
-            prompt_generator = ReActPromptGenerator(config)
-        else:
-            prompt_generator = ShopPDDLStylePolicyPromptGenerator(config)
+        prompt_generator = ShopPDDLStylePolicyPromptGenerator(config)
         return predicate_converter, prompt_generator
 
 
